@@ -1,0 +1,77 @@
+html,body{
+	display: flex;
+	width:100%;
+	height:100%;
+}
+
+.back{
+	width:100%;
+	height:100%;
+	bottom:0;
+	margin:auto;
+	background-color: white;
+	animation-name:back;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+
+.heart{
+	position:absolute;
+	margin:20% auto;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background-color: pink;
+	width:200px;
+	height:200px;
+	transform: rotate(-45deg);
+	animation-name: bigheart;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	
+}
+
+.heart:after{
+	background-color: pink;
+	content: "";
+	border-radius: 50%;
+	position:absolute;
+	width:200px;
+	height:200px;
+	top:0px;
+	left:100px;
+}
+
+.heart:before{
+	background-color: pink;
+	content: "";
+	border-radius: 50%;
+	position:absolute;
+	width:200px;
+	height:200px;
+	top:-100px;
+	left:0px;
+}
+
+@keyframes back{
+  	50%{
+  		background-color: #ffe6f2;;
+  	}
+  }
+
+
+@keyframes bigheart{
+
+	0%{
+		transform: rotate(-45deg) scale(1);
+	}
+
+	
+	50%{
+		transform: rotate(-45deg) scale(0.6);
+	}
+
+  }
+
